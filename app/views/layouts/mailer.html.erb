@@ -1,0 +1,18 @@
+<h1>Objave</h1>
+
+<%= link_to 'Dodaj novo objavo', new_post_path, class: "btn btn-primary" %>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <h2><%= link_to post.title, post %></h2>
+      <p><%= truncate(post.content, length: 100) %></p>
+    </li>
+  <% end %>
+</ul>
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+
+<%= link_to 'Uredi', edit_post_path(@post), class: "btn btn-secondary" %>
+<%= link_to 'Izbriši', @post, method: :delete, data: { confirm: 'Si prepričan?' }, class: "btn btn-danger" %>
+<%= link_to 'Nazaj', posts_path, class: "btn btn-primary" %>

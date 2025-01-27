@@ -1,0 +1,5 @@
+<%= form_with(model: [post, Romment.new]) do |form| %>
+    <%= form.label :content, 'Dodaj svoj komentar:' , style: "display:block"%>
+    <%= form.text_area :content %>
+    <%= form.submit %>
+    <% end %>
