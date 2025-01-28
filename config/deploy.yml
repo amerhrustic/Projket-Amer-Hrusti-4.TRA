@@ -1,5 +1,5 @@
 # Name of your application. Used to uniquely configure containers.
-service: BLOG
+service: blog
 
 # Name of the container image.
 image: Projket-Amer-Hrusti-avtocenter
@@ -90,7 +90,7 @@ builder:
   #   - RAILS_MASTER_KEY
 
 # Use a different ssh user than root
- ssh:
+ssh:
   user: user
 
 # Use accessory services (secrets come from .kamal/secrets).
